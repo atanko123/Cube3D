@@ -1,27 +1,54 @@
+let rotateX = 0, rotateY = 0
+const cube = document.getElementById('cube')
 
-function handleClick(id) {
-    const cube = document.getElementById('cube')
-
-    let rotate
-    switch (id) {
+function handleRotationBySide(sideId) {
+    switch (sideId) {
         case 'top':
-            rotate = 'rotateX(-90deg)'
+            rotateX = -90
+            rotateY = 0
         break
         case 'bottom':
-            rotate = 'rotateX(90deg)'
+            rotateX = 90
+            rotateY = 0
         break
         case 'right':
-            rotate = 'rotateY(-90deg)'
+            rotateX = 0
+            rotateY = -90
         break
         case 'left':
-            rotate = 'rotateY(90deg)'
+            rotateX = 0
+            rotateY = 90
         break
         case 'back':
-            rotate = 'rotateY(180deg)'
+            rotateX = 0
+            rotateY = 180
         break
         case 'front':
-            rotate = 'rotateY(0deg)'
+            rotateX = 0
+            rotateY = 0
         break
     }
-    cube.style.transform = `translateZ(-150px) ${rotate}`
+    handleRotation()
+}
+
+function handleRotationByDirection(direction) {
+    switch (direction) {
+        case 'up':
+            rotateX = (rotateX + 90)
+        break
+        case 'down':
+            rotateX = (rotateX - 90)
+        break
+        case 'left':
+            rotateY = (rotateY - 90)
+        break
+        case 'right':
+            rotateY = (rotateY + 90)
+        break
+    }
+    handleRotation()
+}
+
+function handleRotation() {
+    cube.style.transform = `translateZ(-150px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
 }
