@@ -23,7 +23,7 @@ html, body {
     transform-style: preserve-3d;
     transform: translateZ(-150px);
     position: relative;
-    transition: transform 1s;
+    transition: 1s ease-out;
 }
 
 .face {
@@ -68,16 +68,41 @@ html, body {
 
 .buttons {
     margin: 20px;
+    width: 300px;
+    height: 200px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
-.buttons > button {
+button {
     margin: 10px;
     width: 80px;
     background-color: #e7e7e7;
     border: 2px solid black;
 }
 
-.buttons > button:hover {
+button:hover {
     background-color: white;
     cursor: pointer;
+}
+
+.direction-buttons {
+    margin: 20px;
+    width: 300px;
+    height: 150px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

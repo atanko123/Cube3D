@@ -18,19 +18,33 @@
                 </div>
             </div>
             <div class="buttons">
-                <button onclick="handleRotationBySide('front')">Front</button>
-                <button onclick="handleRotationBySide('right')">Right</button>
-                <button onclick="handleRotationBySide('back')">Back</button>
-                <button onclick="handleRotationBySide('left')">Left</button>
-                <button onclick="handleRotationBySide('top')">Top</button>
-                <button onclick="handleRotationBySide('bottom')">Bottom</button>
+                <div class='row'>
+                     <button onclick="handleRotationBySide('top')">Top</button>
+                </div>
+                <div class='row'>
+                    <button onclick="handleRotationBySide('left')">Left</button>
+                    <button onclick="handleRotationBySide('front')">Front</button>
+                    <button onclick="handleRotationBySide('right')">Right</button>
+                </div>
+                <div class='row'>
+                    <button onclick="handleRotationBySide('bottom')">Bottom</button>
+                </div>
+                <div class='row'>
+                    <button onclick="handleRotationBySide('back')">Back</button>
+                </div>
             </div>
 
-            <div class="buttons">
-                <button onclick="handleRotationByDirection('up')">&#x2191;</button>
-                <button onclick="handleRotationByDirection('left')">&#x2190;</button>
-                <button onclick="handleRotationByDirection('right')">&#x2192;</button>
-                <button onclick="handleRotationByDirection('down')">&#x2193;</button>
+            <div class="direction-buttons">
+                <div class='row'>
+                    <button onclick="handleRotationByDirection('up')">&#x2191;</button>
+                </div>
+                <div class='row'>
+                    <button onclick="handleRotationByDirection('left')">&#x2190;</button>
+                    <button onclick="handleRotationByDirection('right')">&#x2192;</button>
+                </div>
+                <div class='row'>
+                    <button onclick="handleRotationByDirection('down')">&#x2193;</button>
+                </div>
             </div>
         </div>
         <script src="./cube.js"></script>
